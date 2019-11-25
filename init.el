@@ -11,6 +11,14 @@
     `(eval-after-load ,feature '(progn ,@body))))
 
 
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer 
+          (delq (current-buffer) 
+                (remove-if-not 'buffer-file-name (buffer-list)))))
+
+
 ;; font
 (set-face-attribute 'default nil
                     :family "PT Mono"
@@ -254,6 +262,8 @@
 
 
 
+;; shell
+(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
 
 (custom-set-variables
