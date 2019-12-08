@@ -16,7 +16,9 @@
 (setq completion-cycle-threshold 5)
 
 
-
+;; make it lazy load
+(setenv "GO111MODULE" "on")
+(require 'go-mod-mode)
 
 
 
