@@ -13,7 +13,9 @@
                           autopair
                           cider
                           clojure-mode
-                          elpy
+			  elfeed
+			  elpy
+			  
                           f
 			  helm
                           feature-mode
