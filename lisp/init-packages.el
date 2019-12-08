@@ -13,6 +13,7 @@
                           autopair
                           cider
                           clojure-mode
+			  dumb-jump
 			  elfeed
 			  elpy
 			  
