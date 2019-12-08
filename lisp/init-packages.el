@@ -36,6 +36,7 @@
                           rvm
                           smex
                           solarized-theme
+			  treemacs
                           web-mode
                           writegood-mode
                           yaml-mode)
