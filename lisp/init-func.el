@@ -5,6 +5,10 @@
 
 
 
+(defun generate-buffer ()
+  (interactive)
+  (switch-to-buffer (make-temp-name "scratch")))
+
 
 (defun delete-current-buffer-file ()
   "Remove file connected to current buffer and kill buffer."
