@@ -5,3 +5,7 @@ ac-comphist.dat
 ido.last
 recentf
 games/
+bookmarks
+url/
+custom.el
+.cache/

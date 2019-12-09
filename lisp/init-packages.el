@@ -13,7 +13,10 @@
                           autopair
                           cider
                           clojure-mode
-                          elpy
+			  dumb-jump
+			  elfeed
+			  elpy
+			  
                           f
 			  helm
                           feature-mode
@@ -33,6 +36,7 @@
                           rvm
                           smex
                           solarized-theme
+			  treemacs
                           web-mode
                           writegood-mode
                           yaml-mode)
