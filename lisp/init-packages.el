@@ -14,10 +14,12 @@
                           cider
                           clojure-mode
 			  dumb-jump
+			  dockerfile-mode
 			  elfeed
 			  elpy
 			  
                           f
+			  groovy-mode
 			  helm
                           feature-mode
                           flycheck

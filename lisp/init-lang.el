@@ -40,6 +40,12 @@
 (setq scheme-program-name "racket")
 
 
+;; jenkinsfile
 
+(require 'jenkinsfile-mode)
+(add-to-list 'auto-mode-alist '("Jenkinsfile" . jenkinsfile-mode))
+
+
+(add-to-list 'auto-mode-alist '("*Dockerfile*$" . dockerfile-mode))
 
 (provide 'init-lang)
