@@ -12,6 +12,7 @@
 (require 'init-keys)
 (require 'init-system)
 (require 'init-lang)
+(require 'init-org)
 (require 'init-golang)
 
 

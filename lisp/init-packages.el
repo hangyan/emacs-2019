@@ -21,6 +21,7 @@
                           f
 			  groovy-mode
 			  helm
+			  helm-make
                           feature-mode
                           flycheck
                           graphviz-dot-mode
