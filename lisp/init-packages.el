@@ -22,6 +22,8 @@
 			  groovy-mode
 			  helm
 			  helm-make
+			  helm-org
+			  kubernetes
                           feature-mode
                           flycheck
                           graphviz-dot-mode
