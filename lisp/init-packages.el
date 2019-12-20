@@ -29,7 +29,6 @@
 			  dockerfile-mode
 			  elfeed
 			  elpy
-			  
                           f
 			  groovy-mode
 			  helm
@@ -56,6 +55,7 @@
 			  treemacs
                           web-mode
                           writegood-mode
+			  use-package
                           yaml-mode)
   "Default packages")
 

@@ -9,6 +9,7 @@
 (require 'init-packages)
 (require 'init-func)
 (require 'init-gui)
+(require 'init-treemacs)
 (require 'init-keys)
 (require 'init-system)
 (require 'init-lang)
