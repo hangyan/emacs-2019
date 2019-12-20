@@ -48,4 +48,9 @@
 
 (add-to-list 'auto-mode-alist '("*Dockerfile*$" . dockerfile-mode))
 
+
+;; smart compile
+(require 'smart-compile)
+(global-set-key (kbd "<f9>") 'smart-compile)
+
 (provide 'init-lang)
