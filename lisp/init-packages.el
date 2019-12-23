@@ -25,6 +25,7 @@
                           autopair
                           cider
                           clojure-mode
+			  diff-hl
 			  dumb-jump
 			  dockerfile-mode
 			  elfeed

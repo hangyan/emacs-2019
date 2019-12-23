@@ -112,4 +112,8 @@
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
 
+
+;; git related
+(global-diff-hl-mode)
+
 (provide 'init-system)
