@@ -53,4 +53,26 @@
 (require 'smart-compile)
 (global-set-key (kbd "<f9>") 'smart-compile)
 
+
+;; flycheck
+(global-flycheck-mode)
+
+;; lsp mode
+(use-package lsp-mode
+  :hook (XXX-mode . lsp)
+  :commands lsp)
+
+;; optionally
+
+;;(require 'tree-mode)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package company-lsp :commands company-lsp)
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+;; optionally if you want to use debugger
+;; (use-package dap-mode)
+;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
+
 (provide 'init-lang)
