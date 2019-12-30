@@ -33,7 +33,7 @@
 
 
 (if window-system
-    (load-theme 'solarized-light t)
+    (load-theme 'tsdh-dark t)
   (load-theme 'wombat t))
 
 
