@@ -32,6 +32,7 @@
 			  elfeed
 			  elpy
                           f
+			  flycheck
 			  groovy-mode
 			  helm
 			  helm-make
@@ -41,6 +42,7 @@
                           flycheck
                           graphviz-dot-mode
                           htmlize
+			  lsp-mode
                           magit
                           markdown-mode
 			  nord-theme
