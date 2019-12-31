@@ -25,6 +25,7 @@
                           autopair
                           cider
                           clojure-mode
+			  dashboard
 			  diff-hl
 			  dumb-jump
 			  dockerfile-mode
@@ -41,8 +42,8 @@
                           graphviz-dot-mode
                           htmlize
                           magit
-
                           markdown-mode
+			  nord-theme
                           org
                           paredit
 			  go-mode

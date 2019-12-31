@@ -42,7 +42,23 @@
 (powerline-default-theme)
 
 
+;; dashboard
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
 
+
+(setq dashboard-items '((recents  . 5)
+                        (bookmarks . 5)
+                        (projects . 5)
+                        (agenda . 5)
+                        (registers . 5)))
+
+
+;; themes
+;; (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+;; (load-theme 'nord t)
 
 
 (provide 'init-gui)
