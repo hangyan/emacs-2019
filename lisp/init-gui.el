@@ -1,10 +1,6 @@
 ;; font
-(set-face-attribute 'default nil
-                    :family "PT Mono"
-                    :height 130
-                    :weight 'normal
-                    :width 'normal)
-
+(add-to-list 'default-frame-alist
+             '(font . "PT Mono-10"))
 
 
 (setq inhibit-splash-screen t
