@@ -56,6 +56,7 @@
                           rvm
                           smex
                           solarized-theme
+			  super-save
 			  treemacs
                           web-mode
                           writegood-mode

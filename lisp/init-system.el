@@ -116,4 +116,10 @@
 ;; git related
 (global-diff-hl-mode)
 
+
+;; auto save when lose foucs
+(super-save-mode +1)
+(setq auto-save-default nil)
+
+
 (provide 'init-system)
