@@ -45,6 +45,7 @@
 			  lsp-mode
                           magit
                           markdown-mode
+			  markdown-toc
 			  nord-theme
                           org
                           paredit
