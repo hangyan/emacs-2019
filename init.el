@@ -15,6 +15,7 @@
 (require 'init-lang)
 (require 'init-org)
 (require 'init-golang)
+(require 'init-spell)
 
 
 
