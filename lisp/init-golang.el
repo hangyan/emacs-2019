@@ -22,6 +22,11 @@
 (require 'go-mod-mode)
 
 
+;; flycheck settings
+(let ((govet (flycheck-checker-get 'go-vet 'command)))
+  (when (equal (cadr govet) "tool")
+    (setf (cdr govet) (cddr govet))))
+
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 (provide 'init-golang)

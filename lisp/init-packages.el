@@ -46,7 +46,6 @@
 			  kubernetes
                           feature-mode
                           flycheck
-			  flycheck-golangci-lint
                           graphviz-dot-mode
                           htmlize
 			  lsp-mode
