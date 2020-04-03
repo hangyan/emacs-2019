@@ -91,4 +91,8 @@
 ;; highlight parenthesis
 (show-paren-mode 1)
 
+
+;; format emacs lisp code
+(require 'elisp-format)
+
 (provide 'init-lang)

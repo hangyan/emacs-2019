@@ -37,6 +37,7 @@
 			  dumb-jump
 			  dockerfile-mode
 			  elfeed
+			  elisp-format
 			  elpy
                           f
 			  flycheck
