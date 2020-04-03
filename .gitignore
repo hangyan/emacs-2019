@@ -11,3 +11,4 @@ custom.el
 .cache/
 custom.el*
 session.*
+.lsp-session*
