@@ -62,6 +62,7 @@
 			  company
 			  company-go
                           powerline
+			  request
                           rvm
                           smex
                           solarized-theme

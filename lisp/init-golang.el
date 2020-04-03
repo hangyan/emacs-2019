@@ -11,6 +11,8 @@
   (exec-path-from-shell-copy-env "GOPATH"))
 
 
+;; playonline
+(require 'playonline)
 
 
 ;; (add-hook 'go-mode-hook

@@ -19,6 +19,8 @@
  '(livedown-browser nil))  ; browser to use
 (require 'livedown)
 
+
+;; lisp
 (setq lisp-modes '(lisp-mode emacs-lisp-mode common-lisp-mode scheme-mode clojure-mode))
 
 (defvar lisp-power-map (make-keymap))
@@ -37,6 +39,12 @@
 
 (setq inferior-lisp-program "clisp")
 (setq scheme-program-name "racket")
+
+
+;; font lock
+(with-eval-after-load 'elisp-mode
+  (require 'elispfl)
+  (elispfl-mode))
 
 
 ;; jenkinsfile
