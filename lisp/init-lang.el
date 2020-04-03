@@ -81,6 +81,8 @@
 ;; add company settings here
 ;; see: https://github.com/iquiw/company-ghc/issues/12
 (add-hook 'after-init-hook 'global-company-mode)
+;; this need to download a binrary. In case the network error,
+;; download it to ~/.TabNine/$version/$arch/$name
 (with-eval-after-load 'company (add-to-list 'company-backends 'company-tabnine))
 
 ;; Trigger completion immediately.
