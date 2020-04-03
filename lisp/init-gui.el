@@ -1,26 +1,17 @@
 ;; font
 
 
-(with-system gnu/linux
-  
-  (add-to-list 'default-frame-alist
-	       '(font . "PT Mono-10"))
-  )
+(with-system gnu/linux (add-to-list 'default-frame-alist '(font . "PT Mono-10")))
 
-(with-system darwin
-  (add-to-list 'default-frame-alist
-	       '(font . "PT Mono-13")))
+(with-system darwin (add-to-list 'default-frame-alist '(font . "PT Mono-13")))
 
 
-(setq inhibit-splash-screen t
-      initial-scratch-message nil
-      initial-major-mode 'org-mode)
+(setq inhibit-splash-screen t initial-scratch-message nil initial-major-mode 'org-mode)
 
 
-(if (display-graphic-p)
-    (progn
-      (tool-bar-mode -1)
-      (scroll-bar-mode -1)))
+(if (display-graphic-p) 
+    (progn (tool-bar-mode -1) 
+	   (scroll-bar-mode -1)))
 
 
 (setq use-file-dialog nil)
@@ -33,12 +24,14 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 
+;; menu bar +
+(eval-after-load "menu-bar" 
+  '(require 'menu-bar+))
 
 
 
 
-(if window-system
-    (load-theme 'tsdh-dark t)
+(if window-system (load-theme 'tsdh-dark t) 
   (load-theme 'wombat t))
 
 
@@ -48,22 +41,62 @@
 
 
 ;; dashboard
-(use-package dashboard
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook))
+(use-package 
+  dashboard 
+  :ensure t 
+  :config (dashboard-setup-startup-hook))
 
 
-(setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
+(setq dashboard-items '((recents  . 5) 
+			(bookmarks . 5) 
+			(projects . 5) 
+			(agenda . 5) 
+			(registers . 5)))
 
 
 ;; themes
 ;; (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 ;; (load-theme 'nord t)
 
+
+;; imenu
+(defun try-to-add-imenu () 
+  (condition-case nil (imenu-add-to-menubar "Index") 
+    (error 
+     nil)))
+(add-hook 'font-lock-mode-hook 'try-to-add-imenu)
+
+
+;; tabs
+(require 'centaur-tabs)
+(centaur-tabs-mode t)
+(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
+(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+
+(defun centaur-tabs-hide-tab (x) 
+  (let ((name (format "%s" x))) 
+    (or (string-prefix-p "*epc" name) 
+	(string-prefix-p "*helm" name)
+	(string-prefix-p "*Treemacs" name)
+	(string-prefix-p "*Compile-Log*" name) 
+	(string-prefix-p "*lsp" name) 
+	(and (string-prefix-p "magit" name) 
+	     (not (file-name-extension name))))))
+
+(setq centaur-tabs-style "bar")
+
+
+(setq centaur-tabs-set-bar 'under)
+;; Note: If you're not using Spacmeacs, in order for the underline to display
+;; correctly you must add the following line:
+(setq x-underline-at-descent-line t)
+
+
+;; custom menu-bar
+(defvar my-menu-bar-menu (make-sparse-keymap "Mine"))
+(define-key global-map [menu-bar my-menu] (cons "Mine" my-menu-bar-menu))
+
+(define-key my-menu-bar-menu [active-treemacs]
+  '(menu-item "Treemacs" treemacs :help "Active treemacs"))
 
 (provide 'init-gui)

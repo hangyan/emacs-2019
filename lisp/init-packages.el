@@ -31,6 +31,7 @@
                           autopair
                           cider
                           clojure-mode
+			  centaur-tabs
 			  company-tabnine
 			  dashboard
 			  diff-hl

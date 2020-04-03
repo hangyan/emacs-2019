@@ -12,3 +12,4 @@ custom.el
 custom.el*
 session.*
 .lsp-session*
+recentf*
