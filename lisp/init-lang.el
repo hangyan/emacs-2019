@@ -75,4 +75,20 @@
 ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
 
 
+;; add company settings here
+;; see: https://github.com/iquiw/company-ghc/issues/12
+(add-hook 'after-init-hook 'global-company-mode)
+(with-eval-after-load 'company
+  (add-to-list 'company-backends 'company-tabnine))
+
+;; Trigger completion immediately.
+(setq company-idle-delay 0)
+
+;; Number the candidates (use M-1, M-2 etc to select completions).
+(setq company-show-numbers t)
+
+
+;; highlight parenthesis
+(show-paren-mode 1)
+
 (provide 'init-lang)

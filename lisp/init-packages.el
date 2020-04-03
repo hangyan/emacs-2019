@@ -31,6 +31,7 @@
                           autopair
                           cider
                           clojure-mode
+			  company-tabnine
 			  dashboard
 			  diff-hl
 			  dumb-jump
