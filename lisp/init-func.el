@@ -4,6 +4,13 @@
 ;;; Code:
 
 
+;; check os type
+(defmacro with-system (type &rest body)
+  "Evaluate BODY if `system-type' equals TYPE."
+  (declare (indent defun))
+  `(when (eq system-type ',type)
+     ,@body))
+
 
 (defun duplicate-line (arg)
   "Duplicate current line, leaving point in lower line."

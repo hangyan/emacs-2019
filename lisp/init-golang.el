@@ -1,7 +1,16 @@
 ;; golang
+
+
+;; disbale startup warnings
+;; see: https://github.com/syl20bnr/spacemacs/issues/3920
+(setq exec-path-from-shell-arguments '("-i"))
+
+
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "GOPATH"))
+
+
 
 
 (add-hook 'go-mode-hook

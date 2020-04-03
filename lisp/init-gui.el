@@ -1,6 +1,15 @@
 ;; font
-(add-to-list 'default-frame-alist
-             '(font . "PT Mono-10"))
+
+
+(with-system gnu/linux
+  
+  (add-to-list 'default-frame-alist
+	       '(font . "PT Mono-10"))
+  )
+
+(with-system darwin
+  (add-to-list 'default-frame-alist
+	       '(font . "PT Mono-13")))
 
 
 (setq inhibit-splash-screen t
