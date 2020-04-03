@@ -43,6 +43,7 @@
 
 ;; trying lsp mode now...
 ;; see: https://arenzana.org/2019/12/emacs-go-mode-revisited/
+;; RUN: go get golang.org/x/tools/gopls@latest
 (setq lsp-gopls-staticcheck t)
 (setq lsp-eldoc-render-all t)
 (setq lsp-gopls-complete-unimported t)
