@@ -2,7 +2,7 @@
 ;; shell
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
-
+;; markdown
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.mdown$" . markdown-mode))
 
@@ -12,7 +12,12 @@
 				(flyspell-mode t)))
 (setq markdown-command "pandoc --smart -f markdown -t html")
 
-
+(custom-set-variables
+ '(livedown-autostart t) ; automatically open preview when opening markdown files
+ '(livedown-open t)        ; automatically open the browser window
+ '(livedown-port 1337)     ; port for livedown server
+ '(livedown-browser nil))  ; browser to use
+(require 'livedown)
 
 (setq lisp-modes '(lisp-mode emacs-lisp-mode common-lisp-mode scheme-mode clojure-mode))
 
