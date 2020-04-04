@@ -56,6 +56,7 @@
                           markdown-mode
 			  markdown-toc
 			  nord-theme
+			  neotree
                           org
                           paredit
 			  go-mode

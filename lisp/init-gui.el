@@ -97,6 +97,9 @@
 (define-key global-map [menu-bar my-menu] (cons "Mine" my-menu-bar-menu))
 
 (define-key my-menu-bar-menu [active-treemacs]
-  '(menu-item "Treemacs" treemacs :help "Active treemacs"))
+  '(menu-item "Treemacs" treemacs :help "Active Treemacs"))
+
+(define-key my-menu-bar-menu [active-neotree]
+  '(menu-item "NeoTree" neotree :help "Active NeoTree"))
 
 (provide 'init-gui)
