@@ -1,18 +1,10 @@
 ;; golang
 
 
-;; disbale startup warnings
-;; see: https://github.com/syl20bnr/spacemacs/issues/3920
-(setq exec-path-from-shell-arguments '("-i"))
-
-
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "GOPATH"))
-
 
 ;; playonline
 (require 'playonline)
+
 
 
 ;; (add-hook 'go-mode-hook
@@ -32,16 +24,10 @@
 ;; make it lazy load
 (setenv "GO111MODULE" "on")
 
-;; this is totolly fucked up. hardcoded in linux
-;; see: https://github.com/syl20bnr/spacemacs/issues/3920
-(setq exec-path-from-shell-arguments '("-l"))
-(with-system gnu/linux
-  ;; (setenv "GOPATH" "/home/yayu/Golang")
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "GOPATH")
-  (exec-path-from-shell-copy-env "PATH")
-  )
 
+
+;; run tests
+(add-hook 'go-mode-hook #'rats-mode)
 
 
 (require 'go-mod-mode)

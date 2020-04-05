@@ -25,6 +25,9 @@ sudo pacman -S pandoc
 
 ```
 
+## Copy bins
+
+copy bins to /usr/local/bin just in case...
 
 ## After start
 

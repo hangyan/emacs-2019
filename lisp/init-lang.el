@@ -128,4 +128,32 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 
+;; auto pair mode
+(electric-pair-mode 1)
+
+;; highlight todo
+(global-hl-todo-mode)
+
+
+;; yasnippet & auto-insert
+;; ref: https://emacs.stackexchange.com/questions/45629/template-for-new-file
+(use-package yasnippet
+  :config
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")
+  (yas-global-mode 1))
+
+
+(defun hy/go-test-file ()
+  (interactive)
+  (yas-expand-snippet (yas-lookup-snippet "go_test" 'go-mode)))
+
+(use-package autoinsert
+  :config
+  (setq auto-insert-query nil)
+  (auto-insert-mode 1)
+  (add-hook 'find-file-hook 'auto-insert)
+  (setq auto-insert-alist nil) ;; remove this like to restore defaults
+  (add-to-list 'auto-insert-alist  '("^.*_test\\.go$" . [hy/go-test-file])))
+
+
 (provide 'init-lang)

@@ -48,6 +48,7 @@
 			  helm-make
 			  helm-org
 			  hexo
+			  hl-todo
 			  kubernetes
                           feature-mode
                           flycheck
