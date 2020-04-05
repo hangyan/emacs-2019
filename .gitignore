@@ -13,3 +13,4 @@ custom.el*
 session.*
 .lsp-session*
 recentf*
+projectile-bookmarks.eld
