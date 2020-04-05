@@ -1,0 +1,12 @@
+# name: go_test
+# key: gotest
+# --
+package $1
+
+import (
+       "testing"
+)
+
+func Test${2:funcname}(t *testing.T) {
+
+}
