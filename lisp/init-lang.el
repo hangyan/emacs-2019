@@ -10,7 +10,10 @@
 				(visual-line-mode t) 
 				(writegood-mode t) 
 				(flyspell-mode t)))
-(setq markdown-command "pandoc --smart -f markdown -t html")
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(setq markdown-command "pandoc -c ~/.emacs.d/files/github-pandoc.css --from gfm  --quiet   -t html5 --mathjax --highlight-style pygments --standalone")
+
+;; (setq markdown-command "pandoc -f markdown+smart -t markdown-smart")
 
 (custom-set-variables
  '(livedown-autostart t) ; automatically open preview when opening markdown files
@@ -111,5 +114,18 @@
 
 ;; format emacs lisp code
 (require 'elisp-format)
+
+
+;; web mode
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
 
 (provide 'init-lang)

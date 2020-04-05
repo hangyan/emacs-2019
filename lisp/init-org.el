@@ -27,9 +27,17 @@
 
 - [[wiki:index][Index]]
 
-- Related: 
 
 * %n
 "))
+
+
+
+;; preview on save
+(require 'org-preview-html)
+
+
+;; disable fold on open
+(setq org-startup-folded nil)
 
 (provide 'init-org)

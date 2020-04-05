@@ -19,6 +19,10 @@ go get golang.org/x/tools/gopls@latest
 # for aspell
 sudo pacman -S aspell-en
 
+
+# for markdown
+sudo pacman -S pandoc
+
 ```
 
 

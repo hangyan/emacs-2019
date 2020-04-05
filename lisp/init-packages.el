@@ -33,6 +33,7 @@
                           clojure-mode
 			  centaur-tabs
 			  company-tabnine
+			  crux
 			  dashboard
 			  diff-hl
 			  dumb-jump
@@ -46,6 +47,7 @@
 			  helm
 			  helm-make
 			  helm-org
+			  hexo
 			  kubernetes
                           feature-mode
                           flycheck
