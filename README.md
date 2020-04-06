@@ -37,3 +37,8 @@ copy bins to /usr/local/bin just in case...
 M-x company-tabnine-install-binary
 
 ```
+
+
+## Issues
+
+1. upgrade packages regularly

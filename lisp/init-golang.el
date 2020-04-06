@@ -29,7 +29,6 @@
 ;; run tests
 (add-hook 'go-mode-hook #'rats-mode)
 
-
 (require 'go-mod-mode)
 
 

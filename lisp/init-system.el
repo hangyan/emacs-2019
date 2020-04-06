@@ -119,6 +119,7 @@
 
 ;; auto save when lose foucs
 (super-save-mode +1)
+(setq super-save-exclude '(".go"))
 (setq auto-save-default nil)
 
 
