@@ -58,11 +58,6 @@
   :hook (go-mode . go-guru-hl-identifier-mode))
 
 
-(use-package go-eldoc
-  :config
-  (progn
-    (add-hook 'go-mode-hook 'go-eldoc-setup)
-    ))
 
 
 (provide 'init-golang)
