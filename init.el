@@ -34,4 +34,5 @@
 (require 'init-spell)
 (require 'init-util)
 
+;;; init.el ends here
 
