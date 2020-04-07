@@ -61,6 +61,7 @@
                           org
                           paredit
 			  go-mode
+			  go-eldoc
 			  exec-path-from-shell
 			  company
 			  company-go
