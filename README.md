@@ -15,6 +15,9 @@ sudo npm install -g livedown
 # for golang lsp
 go get golang.org/x/tools/gopls@latest
 
+# go go-guru
+go get -u golang.org/x/tools/cmd/guru
+
 
 # for aspell
 sudo pacman -S aspell-en

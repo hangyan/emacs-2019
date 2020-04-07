@@ -24,6 +24,7 @@
 
 
 (exec-path-from-shell-copy-env "GOPATH")
+(exec-path-from-shell-copy-env "PATH")
 (exec-path-from-shell-copy-env "GOPROXY")
 (exec-path-from-shell-copy-env "GO111MODULE")
 (exec-path-from-shell-copy-env "GONOSUMDB")
@@ -58,6 +59,9 @@
   :hook (go-mode . go-guru-hl-identifier-mode))
 
 
+
+(use-package go-mode
+  :config (use-package godoctor))
 
 
 (provide 'init-golang)

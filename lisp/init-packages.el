@@ -61,7 +61,8 @@
                           org
                           paredit
 			  go-mode
-			  go-eldoc
+			  go-guru
+			  godoctor
 			  exec-path-from-shell
 			  company
 			  company-go

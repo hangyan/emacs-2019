@@ -1,4 +1,7 @@
 
+(defconst *os-is-gnu* (eq system-type 'gnu/linux))
+(defconst *os-is-mac* (eq system-type 'darwin))
+(defconst *os-is-windows* (eq system-type 'windows-nt))
 
 ;; performance
 ;; 增大垃圾回收的阈值，提高整体性能（内存换效率）
@@ -7,17 +10,20 @@
 (setq read-process-output-max (* 1024 1024 128)) ;; 128MB
 
 ;; hardcoded path envs
-(setenv "PATH" (concat "/usr/local/bin:/opt/local/bin:/usr/bin:/bin" (getenv "PATH")))
+(setenv "PATH" (concat ":/usr/local/bin:/opt/local/bin:/usr/bin:/bin" (getenv "PATH")))
+(when *os-is-gnu*
+  (setenv "PATH" (concat ":/home/yayu/Golang/bin" (getenv "PATH"))))
+(when *os-is-mac*
+  (setenv "PATH" (concat ":/Users/yayu/Golang/bin" (getenv "PATH"))))
+
 (setq exec-path (append exec-path '("/usr/local/bin")))
+
 
 (require 'cl)
 
 ;; pre
 
 
-(defconst *os-is-gnu* (eq system-type 'gnu/linux))
-(defconst *os-is-mac* (eq system-type 'darwin))
-(defconst *os-is-windows* (eq system-type 'windows-nt))
 
 (if (fboundp 'with-eval-after-load)
     (defalias 'after-load 'with-eval-after-load)
