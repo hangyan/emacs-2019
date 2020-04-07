@@ -24,7 +24,7 @@
 
 
 
-
+;; this should be removed since we use use-package for now...
 (defvar abedra/packages '(ac-slime
                           auto-complete
                           autopair
@@ -45,7 +45,6 @@
 			  helm
 			  helm-make
 			  helm-org
-			  helm-lsp
 			  hexo
 			  hl-todo
 			  kubernetes
