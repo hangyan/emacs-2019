@@ -16,11 +16,6 @@
 
 
 
-;; this is totolly fucked up. hardcoded in linux
-;; see: https://github.com/syl20bnr/spacemacs/issues/3920
-(setq exec-path-from-shell-arguments '("-l"))
-
-
 
 
 (exec-path-from-shell-initialize)
