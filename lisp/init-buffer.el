@@ -58,7 +58,11 @@
   :diminish undo-tree-mode
   :bind ("C-x u" . undo-tree-visualize)
   :config
-  (global-undo-tree-mode t))
+   (progn
+    (global-undo-tree-mode)
+    (setq undo-tree-visualizer-timestamps t)
+    (setq undo-tree-visualizer-diff t)
+    ))
 
 
 ;; multi cursor
