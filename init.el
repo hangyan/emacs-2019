@@ -33,6 +33,7 @@
 ;; spell check
 (require 'init-spell)
 (require 'init-util)
+;; (require 'init-email)
 
 
 (setq custom-file "~/.emacs.d/custom.el")
