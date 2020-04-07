@@ -75,6 +75,7 @@
                           web-mode
                           writegood-mode
 			  use-package
+			  yasnippet-snippets
                           yaml-mode)
   "Default packages")
 
@@ -109,3 +110,4 @@
     (setq use-package-always-demand t))
 
 (provide 'init-packages)
+;;; init-packages ends here
