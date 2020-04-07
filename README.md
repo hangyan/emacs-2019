@@ -23,11 +23,14 @@ sudo pacman -S aspell-en
 # for markdown
 sudo pacman -S pandoc
 
+# for envs
+touch ~/.zshenv
+
+# add envs (GOPROXY...) to zshenv
+
 ```
 
-## Copy bins
 
-copy bins to /usr/local/bin just in case...
 
 ## After start
 
@@ -42,3 +45,4 @@ M-x company-tabnine-install-binary
 ## Issues
 
 1. upgrade packages regularly
+2. re-install packages
