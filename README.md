@@ -18,6 +18,8 @@ go get golang.org/x/tools/gopls@latest
 # go go-guru
 go get -u golang.org/x/tools/cmd/guru
 
+# golang tags
+go get github.com/fatih/gomodifytags
 
 # for aspell
 sudo pacman -S aspell-en

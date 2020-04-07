@@ -63,6 +63,7 @@
 			  go-mode
 			  go-guru
 			  godoctor
+			  go-tag
 			  exec-path-from-shell
 			  company
 			  company-go
