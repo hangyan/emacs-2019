@@ -70,6 +70,7 @@
                           powerline
 			  request
                           rvm
+			  restart-emacs
                           smex
                           solarized-theme
 			  super-save
