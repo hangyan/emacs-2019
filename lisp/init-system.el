@@ -4,7 +4,12 @@
 (require 'cl)
 
 ;; pre
-(defconst *is-a-mac* (eq system-type 'darwin))
+
+
+(defconst *os-is-gnu* (eq system-type 'gnu/linux))
+(defconst *os-is-mac* (eq system-type 'darwin))
+(defconst *os-is-windows* (eq system-type 'windows-nt))
+
 (if (fboundp 'with-eval-after-load)
     (defalias 'after-load 'with-eval-after-load)
   (defmacro after-load (feature &rest body)
@@ -24,33 +29,9 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; minibuffer History
+(savehist-mode 1)
 
-
-(defun untabify-buffer ()
-  (interactive)
-  (untabify (point-min) (point-max)))
-
-(defun indent-buffer ()
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
-(defun cleanup-buffer ()
-  "Perform a bunch of operations on the whitespace content of a buffer."
-  (interactive)
-  (indent-buffer)
-  (untabify-buffer)
-  (delete-trailing-whitespace))
-
-(defun cleanup-region (beg end)
-  "Remove tmux artifacts from region."
-  (interactive "r")
-  (dolist (re '("\\\\│\·*\n" "\W*│\·*"))
-    (replace-regexp re "" nil beg end)))
-
-(global-set-key (kbd "C-x M-t") 'cleanup-region)
-(global-set-key (kbd "C-c n") 'cleanup-buffer)
-
-(setq-default show-trailing-whitespace t)
 
 (setq flyspell-issue-welcome-flag nil)
 (if (eq system-type 'darwin)
@@ -83,11 +64,7 @@
 
 
 
-
-
-
-
-(when *is-a-mac*
+(when *os-is-mac*
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
   (setq-default default-input-method "MacOSX")
@@ -106,21 +83,35 @@
 
 
 
-;; helm
-(require 'helm-config)
-(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(helm-mode 1)
-
 
 ;; git related
 (global-diff-hl-mode)
 
+(use-package magit
+  :ensure t
+  :mode ("/\\(\
+\\(\\(COMMIT\\|NOTES\\|PULLREQ\\|TAG\\)_EDIT\\|MERGE_\\|\\)MSG\
+\\|\\(BRANCH\\|EDIT\\)_DESCRIPTION\\)\\'" . git-commit-mode)
+  :bind (("C-x g" . magit-status)
+         ("C-x M-g" . magit-dispatch)
+         ("C-c M-g" . magit-file-dispatch)))
 
-;; auto save when lose foucs
-(super-save-mode +1)
-(setq super-save-exclude '(".go"))
-(setq auto-save-default nil)
+(use-package gitconfig-mode
+  :ensure t
+  :mode ("/\\.gitconfig\\'" "/\\.git/config\\'" "/git/config\\'"
+         "/\\.gitmodules\\'"))
+
+(use-package gitignore-mode
+  :ensure t
+  :mode ("/\\.gitignore\\'" "/\\.git/info/exclude\\'" "/git/ignore\\'"))
+
+
+
+;; dired
+(setq dired-recursive-copies 'always)
+(setq dired-recursive-deletes 'always)
+
+(setq dired-clean-confirm-killing-deleted-buffers nil)
 
 
 (provide 'init-system)

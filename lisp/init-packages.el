@@ -19,9 +19,8 @@
      ,@body))
 
 (with-system gnu/linux
-	     (message "For linux")
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-)
+  (message "For linux")
+  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 
 
 
@@ -38,7 +37,6 @@
 			  diff-hl
 			  dumb-jump
 			  dockerfile-mode
-			  elfeed
 			  elisp-format
 			  elpy
                           f
@@ -47,6 +45,7 @@
 			  helm
 			  helm-make
 			  helm-org
+			  helm-lsp
 			  hexo
 			  hl-todo
 			  kubernetes
@@ -95,5 +94,18 @@
       (package-install pkg))))
 
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+(require 'bind-key)
+
+(setq use-package-verbose t)
+
+;; Disable lazy loading in daemon mode
+(if (daemonp)
+    (setq use-package-always-demand t))
 
 (provide 'init-packages)
