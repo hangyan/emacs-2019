@@ -70,4 +70,10 @@
   (define-key go-mode-map (kbd "C-c t") #'go-tag-add)
   (define-key go-mode-map (kbd "C-c T") #'go-tag-remove))
 
+
+;; go def jump back
+(with-eval-after-load 'go-mode
+  (define-key go-mode-map (kbd "M-*") #'pop-tag-mark) )
+
+
 (provide 'init-golang)
