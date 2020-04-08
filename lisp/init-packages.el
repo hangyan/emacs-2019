@@ -38,6 +38,7 @@
 			  dumb-jump
 			  dockerfile-mode
 			  elisp-format
+			  elfeed
 			  elpy
                           f
 			  flycheck
@@ -70,6 +71,7 @@
                           powerline
 			  request
                           rvm
+			  rats
 			  restart-emacs
                           smex
                           solarized-theme

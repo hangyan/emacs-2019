@@ -20,7 +20,12 @@ If there is a text selection, use that."
     (setq word (replace-regexp-in-string " " "_" word))
     (browse-url (concat "http://en.wikipedia.org/wiki/" word))))
 
+;; elfeed
+(global-set-key (kbd "C-x w") 'elfeed)
 
+(setq elfeed-feeds
+      '("http://coolshell.cn/feed"
+	"http://www.ruanyifeng.com/blog/atom.xml"))
 
 (provide 'init-util)
 ;;; init-util ends here

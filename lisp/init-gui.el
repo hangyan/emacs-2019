@@ -102,4 +102,7 @@
 (define-key my-menu-bar-menu [active-neotree]
   '(menu-item "NeoTree" neotree :help "Active NeoTree"))
 
+(define-key my-menu-bar-menu [active-elfeed]
+  '(menu-item "Feed" elfeed :help "Read RSS"))
+
 (provide 'init-gui)
