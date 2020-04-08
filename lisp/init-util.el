@@ -25,6 +25,7 @@ If there is a text selection, use that."
 
 (setq elfeed-feeds
       '("http://coolshell.cn/feed"
+	"https://blog.codingnow.com/atom.xml"
 	"http://www.ruanyifeng.com/blog/atom.xml"))
 
 (provide 'init-util)
