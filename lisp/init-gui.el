@@ -9,8 +9,8 @@
 (setq inhibit-splash-screen t initial-scratch-message nil initial-major-mode 'org-mode)
 
 
-(if (display-graphic-p) 
-    (progn (tool-bar-mode -1) 
+(if (display-graphic-p)
+    (progn (tool-bar-mode -1)
 	   (scroll-bar-mode -1)))
 
 
@@ -25,13 +25,13 @@
 
 
 ;; menu bar +
-(eval-after-load "menu-bar" 
+(eval-after-load "menu-bar"
   '(require 'menu-bar+))
 
 
 
 
-(if window-system (load-theme 'tsdh-dark t) 
+(if window-system (load-theme 'tsdh-dark t)
   (load-theme 'wombat t))
 
 
@@ -41,16 +41,16 @@
 
 
 ;; dashboard
-(use-package 
-  dashboard 
-  :ensure t 
+(use-package
+  dashboard
+  :ensure t
   :config (dashboard-setup-startup-hook))
 
 
-(setq dashboard-items '((recents  . 5) 
-			(bookmarks . 5) 
-			(projects . 5) 
-			(agenda . 5) 
+(setq dashboard-items '((recents  . 5)
+			(bookmarks . 5)
+			(projects . 5)
+			(agenda . 5)
 			(registers . 5)))
 
 
@@ -60,11 +60,15 @@
 
 
 ;; imenu
-(defun try-to-add-imenu () 
-  (condition-case nil (imenu-add-to-menubar "Index") 
-    (error 
+(defun try-to-add-imenu ()
+  (condition-case nil (imenu-add-to-menubar "Index")
+    (error
      nil)))
 (add-hook 'font-lock-mode-hook 'try-to-add-imenu)
+
+;; imenu list minor buffers
+(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
+(setq imenu-list-auto-resize t)
 
 
 ;; tabs
@@ -73,14 +77,14 @@
 (global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
 (global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
 
-(defun centaur-tabs-hide-tab (x) 
-  (let ((name (format "%s" x))) 
-    (or (string-prefix-p "*epc" name) 
+(defun centaur-tabs-hide-tab (x)
+  (let ((name (format "%s" x)))
+    (or (string-prefix-p "*epc" name)
 	(string-prefix-p "*helm" name)
 	(string-prefix-p "*Treemacs" name)
-	(string-prefix-p "*Compile-Log*" name) 
-	(string-prefix-p "*lsp" name) 
-	(and (string-prefix-p "magit" name) 
+	(string-prefix-p "*Compile-Log*" name)
+	(string-prefix-p "*lsp" name)
+	(and (string-prefix-p "magit" name)
 	     (not (file-name-extension name))))))
 
 (setq centaur-tabs-style "bar")
@@ -104,5 +108,11 @@
 
 (define-key my-menu-bar-menu [active-elfeed]
   '(menu-item "Feed" elfeed :help "Read RSS"))
+
+(define-key my-menu-bar-menu [active-format-all]
+  '(menu-item "Format All" format-all-buffer :help "Format all buffer" ))
+
+(define-key my-menu-bar-menu [active-imenu-list]
+  '(menu-item "iMenu" imenu-list-smart-toggle :help "Active imenu"))
 
 (provide 'init-gui)

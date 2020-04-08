@@ -28,6 +28,7 @@
 (defvar abedra/packages '(ac-slime
                           auto-complete
                           autopair
+			  bufler
                           cider
                           clojure-mode
 			  centaur-tabs
@@ -42,13 +43,16 @@
 			  elpy
                           f
 			  flycheck
+			  format-all
 			  groovy-mode
 			  helm
+			  helm-bufler
 			  helm-make
 			  helm-org
 			  hexo
 			  hl-todo
 			  ini-mode
+			  imenu-list
 			  kubernetes
                           feature-mode
                           flycheck
@@ -61,6 +65,7 @@
 			  nord-theme
 			  neotree
                           org
+			  org-superstar
                           paredit
 			  go-mode
 			  go-guru
@@ -114,6 +119,8 @@
 ;; Disable lazy loading in daemon mode
 (if (daemonp)
     (setq use-package-always-demand t))
+
+
 
 (provide 'init-packages)
 ;;; init-packages ends here

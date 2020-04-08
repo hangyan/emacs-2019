@@ -40,4 +40,9 @@
 ;; disable fold on open
 (setq org-startup-folded nil)
 
+
+;; org super-start mode
+(require 'org-superstar)
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+
 (provide 'init-org)
