@@ -26,7 +26,12 @@ If there is a text selection, use that."
 (setq elfeed-feeds
       '("http://coolshell.cn/feed"
 	"https://blog.codingnow.com/atom.xml"
+	"https://nickdrozd.github.io/feed.xml"
 	"http://www.ruanyifeng.com/blog/atom.xml"))
+
+;; eshell
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/packages/aweshell"))
+(require 'aweshell)
 
 (provide 'init-util)
 ;;; init-util ends here
