@@ -100,6 +100,12 @@
 (defvar my-menu-bar-menu (make-sparse-keymap "Mine"))
 (define-key global-map [menu-bar my-menu] (cons "Mine" my-menu-bar-menu))
 
+(define-key my-menu-bar-menu [active-eshell]
+  '(menu-item "Shell" aweshell-toggle :help "Awe Eshell"))
+
+(define-key my-menu-bar-menu  [swith-treemacs-workspace]
+  '(menu-item "Workspace" treemacs-switch-workspace :help "Switch Workspace"))
+
 (define-key my-menu-bar-menu [active-treemacs]
   '(menu-item "Treemacs" treemacs :help "Active Treemacs"))
 
@@ -114,5 +120,6 @@
 
 (define-key my-menu-bar-menu [active-imenu-list]
   '(menu-item "iMenu" imenu-list-smart-toggle :help "Active imenu"))
+
 
 (provide 'init-gui)
