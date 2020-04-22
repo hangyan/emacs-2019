@@ -3,7 +3,7 @@
 
 (with-system gnu/linux (add-to-list 'default-frame-alist '(font . "PT Mono-10")))
 
-(with-system darwin (add-to-list 'default-frame-alist '(font . "PT Mono-13")))
+(with-system darwin (add-to-list 'default-frame-alist '(font . "Source Code Pro-12")))
 
 
 (setq inhibit-splash-screen t initial-scratch-message nil initial-major-mode 'org-mode)
