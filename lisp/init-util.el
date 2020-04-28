@@ -27,6 +27,7 @@ If there is a text selection, use that."
       '("http://coolshell.cn/feed"
 	"https://blog.codingnow.com/atom.xml"
 	"https://nickdrozd.github.io/feed.xml"
+	"https://brandur.org/articles.atom"
 	"http://www.ruanyifeng.com/blog/atom.xml"))
 
 ;; eshell

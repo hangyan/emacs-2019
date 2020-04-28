@@ -22,13 +22,12 @@
 (setq exec-path-from-shell-arguments '("-l"))
 
 
-
+;; if you are using bash, the following env should be placed into .bash_profile
 (exec-path-from-shell-copy-env "GOPATH")
 (exec-path-from-shell-copy-env "PATH")
 (exec-path-from-shell-copy-env "GOPROXY")
 (exec-path-from-shell-copy-env "GO111MODULE")
 (exec-path-from-shell-copy-env "GONOSUMDB")
-
 
 ;; run tests
 (add-hook 'go-mode-hook #'rats-mode)
