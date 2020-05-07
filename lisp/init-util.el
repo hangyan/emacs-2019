@@ -34,5 +34,9 @@ If there is a text selection, use that."
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/packages/aweshell"))
 (require 'aweshell)
 
+;; start server
+(load "server")
+(unless (server-running-p) (server-start))
+
 (provide 'init-util)
 ;;; init-util ends here
