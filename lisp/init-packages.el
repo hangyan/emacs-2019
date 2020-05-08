@@ -53,6 +53,7 @@
 			  hl-todo
 			  ini-mode
 			  imenu-list
+			  json-mode
 			  kubernetes
                           feature-mode
                           flycheck
