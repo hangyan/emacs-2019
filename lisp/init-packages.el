@@ -45,11 +45,8 @@
 			  flycheck
 			  format-all
 			  groovy-mode
-			  helm
-			  helm-bufler
-			  helm-make
-			  helm-org
 			  hexo
+			  helm
 			  hl-todo
 			  ini-mode
 			  imenu-list

@@ -27,11 +27,11 @@
 ;; lsp,yasnippet, company...
 (require 'init-lsp)
 ;; org mode settings
-(require 'init-org)
+;;(require 'init-org)
 ;; all about golang
 (require 'init-golang)
 ;; spell check
-(require 'init-spell)
+;;(require 'init-spell)
 (require 'init-util)
 ;; (require 'init-email)
 
