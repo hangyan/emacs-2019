@@ -22,7 +22,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 
-
-
+;; lsp
+(global-set-key (kbd "C-c C-l") 'lsp-find-references)
 
 (provide 'init-keys)
