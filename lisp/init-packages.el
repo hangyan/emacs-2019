@@ -27,10 +27,10 @@
 ;; this should be removed since we use use-package for now...
 (defvar abedra/packages '(ac-slime
                           auto-complete
-                          autopair
+                          
 			  bufler
-                          cider
-                          clojure-mode
+        cider
+        clojure-mode
 			  centaur-tabs
 			  company-tabnine
 			  crux
@@ -55,19 +55,19 @@
 			  imenu-list
 			  json-mode
 			  kubernetes
-                          feature-mode
-                          flycheck
-                          graphviz-dot-mode
-                          htmlize
+        feature-mode
+        flycheck
+        graphviz-dot-mode
+        htmlize
 			  lsp-mode
-                          magit
-                          markdown-mode
+        magit
+        markdown-mode
 			  markdown-toc
 			  nord-theme
 			  neotree
-                          org
+        org
 			  org-superstar
-                          paredit
+        paredit
 			  go-mode
 			  go-guru
 			  godoctor
@@ -75,20 +75,20 @@
 			  exec-path-from-shell
 			  company
 			  company-go
-                          powerline
+        powerline
 			  request
-                          rvm
+        rvm
 			  rats
 			  restart-emacs
-                          smex
-                          solarized-theme
+        smex
+        solarized-theme
 			  super-save
 			  treemacs
-                          web-mode
-                          writegood-mode
+        web-mode
+        writegood-mode
 			  use-package
 			  yasnippet-snippets
-                          yaml-mode)
+        yaml-mode)
   "Default packages")
 
 

@@ -25,7 +25,7 @@
 ;; languages settings, markdown,shell...
 (require 'init-lang)
 ;; lsp,yasnippet, company...
-(require 'init-lsp)
+;;(require 'init-lsp)
 ;; org mode settings
 (require 'init-org)
 ;; all about golang
